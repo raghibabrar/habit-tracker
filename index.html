@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>My Habits</h1>
+            <div class="week-controls">
+                <button id="prev-week" aria-label="Previous week">&larr;</button>
+                <h2 id="current-week-label">Loading...</h2>
+                <button id="next-week" aria-label="Next week">&rarr;</button>
+                <button id="today-btn">This Week</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="empty-state" class="hidden">
+                <div class="empty-icon">🌱</div>
+                <h3>No habits yet</h3>
+                <p>Start small. Add a daily habit to build your routine.</p>
+            </div>
+
+            <div id="tracker-container">
+                <!-- Grid will be injected here by JS -->
+            </div>
+        </main>
+
+        <div class="actions">
+            <input type="text" id="new-habit-input" placeholder="e.g., Read 30 min" aria-label="New habit name">
+            <button id="add-habit-btn">+ Add Habit</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
